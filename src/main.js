@@ -1,11 +1,9 @@
-import { createApp, reactive } from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-
+import GStore from "./store";
 import "./assets/main.css";
 import "nprogress/nprogress.css";
-
-const GStore = reactive({ flashMessage: "" });
 
 const app = createApp(App);
 
