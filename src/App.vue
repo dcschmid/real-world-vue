@@ -1,8 +1,14 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
+<script>
+export default {
+  inject: ["GStore"],
+};
 </script>
 
 <template>
+  <div class="flashMessage" v-if="GStore.flashMessage">
+    {{ GStore.flashMessage }}
+  </div>
+
   <header>
     <div class="wrapper">
       <nav>
@@ -65,5 +71,19 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+@keyframes greenfade {
+  from {
+    background: hsla(160, 100%, 37%, 1);
+  }
+  to {
+    background: transparent;
+  }
+}
+
+.flashMessage {
+  animation-name: greenfade;
+  animation-duration: 3s;
 }
 </style>
