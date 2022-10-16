@@ -10,8 +10,8 @@
         >Register</router-link
       >
       |
-      <router-link class="nav-item" :to="{ name: 'EventEdit' }"
-        >Edit</router-link
+      <router-link class="nav-item" :to="{ name: 'EventCreate' }"
+        >Create</router-link
       >
     </div>
     <router-view :event="GStore.event" />

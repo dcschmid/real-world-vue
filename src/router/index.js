@@ -6,7 +6,7 @@ import EventList from "../views/EventList.vue";
 import EventLayout from "../views/event/EventLayout.vue";
 import EventDetails from "@/views/event/EventDetails.vue";
 import EventRegister from "@/views/event/EventRegister.vue";
-import EventEdit from "@/views/event/EventEdit.vue";
+import EventCreate from "@/views/event/EventCreate.vue";
 import EventService from "@/services/EventService";
 import NetworkError from "@/views/NetworkError.vue";
 import NotFound from "@/views/NotFound.vue";
@@ -52,9 +52,9 @@ const router = createRouter({
           component: EventRegister,
         },
         {
-          path: "edit",
-          name: "EventEdit",
-          component: EventEdit,
+          path: "create",
+          name: "EventCreate",
+          component: EventCreate,
         },
       ],
     },
